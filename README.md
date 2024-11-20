@@ -38,6 +38,11 @@ $ yarn install
 # development
 $ yarn run start
 
+## docker for db
+```bash
+$ docker-compose up -d
+```
+
 # watch mode
 $ yarn run start:dev
 
