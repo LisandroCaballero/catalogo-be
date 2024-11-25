@@ -25,4 +25,7 @@ export class Product {
 
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   createdAt: Date;
+  
+  @Column({ unique: true })
+  code: string;
 }

@@ -16,7 +16,7 @@ export class ProductsController {
       storage: diskStorage({
         destination: './uploads',
         filename: (req, file, callback) => {
-          const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+          const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
           callback(null, `${uniqueSuffix}${extname(file.originalname)}`);
         },
       }),
@@ -46,7 +46,7 @@ export class ProductsController {
       storage: diskStorage({
         destination: './uploads',
         filename: (req, file, callback) => {
-          const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+          const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
           callback(null, `${uniqueSuffix}${extname(file.originalname)}`);
         },
       }),
@@ -63,7 +63,6 @@ export class ProductsController {
     }
     return this.productsService.update(+id, productData);
   }
-
 
   @Delete(':id')
   remove(@Param('id') id: string) {
